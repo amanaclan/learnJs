@@ -1,0 +1,9 @@
+function sumFibs(num){
+    const f = [0,1]
+    for (let i=2;i<num;i++){
+        f[i] = f[i-2] + f[i-1]
+    }
+    return f.filter(el => el % 2 == 1 && el <= num).reduce((a,b) => a+b)
+}
+console.log(sumFibs(1000));
+
